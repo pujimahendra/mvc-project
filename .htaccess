@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Jika akses ke root proyek, arahkan ke public/
+RewriteRule ^$ public/ [L]
+
+# Jika akses file/folder lain, arahkan ke public/index.php
+RewriteRule (.*) public/$1 [L]
