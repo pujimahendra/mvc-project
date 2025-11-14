@@ -1,52 +1,51 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               8.0.43-0ubuntu0.24.04.2 - (Ubuntu)
--- Server OS:                    Linux
--- HeidiSQL Version:             12.12.1.208
--- --------------------------------------------------------
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Nov 14, 2025 at 05:21 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `percobaan_1`
+--
 
--- Dumping database structure for percobaan_1
-DROP DATABASE IF EXISTS `percobaan_1`;
-CREATE DATABASE IF NOT EXISTS `percobaan_1` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `percobaan_1`;
+-- --------------------------------------------------------
 
--- Dumping structure for table percobaan_1.mahasiswa
-DROP TABLE IF EXISTS `mahasiswa`;
-CREATE TABLE IF NOT EXISTS `mahasiswa` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nim` varchar(80) COLLATE utf8mb4_general_ci NOT NULL DEFAULT '00000',
-  `nama` varchar(80) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `prodi` varchar(80) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `pt` varchar(80) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='berisi data mahasiswa';
+--
+-- Table structure for table `mahasiswa`
+--
 
--- Data exporting was unselected.
+CREATE TABLE `mahasiswa` (
+  `id` int(11) NOT NULL,
+  `nim` varchar(70) DEFAULT '000',
+  `nama` varchar(70) DEFAULT NULL,
+  `prodi` varchar(70) DEFAULT NULL,
+  `pt` varchar(70) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping structure for table percobaan_1.tbl_user
-DROP TABLE IF EXISTS `tbl_user`;
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nik` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
-  `nama` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='tabel ini berisi user untuk login';
+--
+-- Indexes for dumped tables
+--
 
--- Data exporting was unselected.
+--
+-- Indexes for table `mahasiswa`
+--
+ALTER TABLE `mahasiswa`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
 
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -39,7 +39,7 @@ class Mahasiswa_model {
         $this->db->bind('nim', $data['nim']);
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('prodi', $data['ps']);
-        $this->db->bind('id', $data['id']);
+        $this->db->bind('pt', $data['pt']);
 
         $this->db->execute();
         return $this->db->rowCount();
